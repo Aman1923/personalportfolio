@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman-Front end web developer</title>  
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <style> 
+    *{      
+        margin: 0px;
+        padding: 0px;
+    }  
+    body{ 
+        
+    }
+    .container{ 
+        display: flex; 
+        height: 100vh;
+    }
+        .sidebar{ 
+             background-color: rgb(201, 201, 201);  
+         
+            font-family: 'Fira Sans', sans-serif; 
+            transition: transform 0.3s;
+        }   
+    .sidebar nav{ 
+        
+    padding: 45px 24px; 
+
+        
+    } 
+    .sidebar nav li {  
+        list-style: none;
+            font-size: 30px; 
+            padding: 33px 0px; 
+            
+    } 
+    .sidebar nav li a { 
+        text-decoration: none; 
+        color: black;
+    }
+  .main{ 
+       /* background-color: yellow; */   
+      width: 80vw; 
+      
+  }  
+  .hamburger{
+      display: flex;
+  }
+   .infocontainer{  
+       /*  background-color: purple;  */ 
+       height: 58vh;
+       width: 60vw; 
+       margin: 144px auto; 
+       display: flex; 
+       justify-content: space-around; 
+       
+   } 
+      .image  img  {  
+       height: 58vh;  
+    
+       
+        
+      }   
+      .devinfo{ 
+          display: flex;
+          justify-content: center;
+          flex-direction: column; 
+          font-family: 'Fira Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+          font-size: 16px;
+
+
+      } 
+      .hello{ 
+          font-size: 3em;
+      } 
+      .name{  font-family: 'Fira Sans', sans-serif;
+          font-size: 3em; 
+          font-weight: bold;
+      } 
+      .about{ 
+          font-size: 2.5em;
+      }  
+      .moreabout{ 
+          font-size: 1.5em;
+      }
+    .buttons { 
+        margin-top: 2.2em;  
+
+    
+    } 
+    .buttons button{ 
+        padding: 9px 14px;
+        border-radius: 22px; 
+        color: white; 
+        background-color: dodgerblue; 
+        font-size: bold; 
+        font-size: 1.5em; 
+        margin: 3px 0px; 
+        cursor: pointer; 
+        
+    } 
+    .buttons button:hover{ 
+        background-color: black; 
+        
+    } 
+    .cv{ 
+        text-decoration: none;
+    }  
+    .hamburger{  
+        position: absolute;  
+          left: 10px;
+          top: 20px;
+    
+    }  
+    .ham{ 
+        margin-left: 5px;
+    }
+ .cross{ 
+     margin-left: 95px;
+ } 
+ .sidebargo{ 
+     transform: translate(-443px,0px); 
+     
+ }
+  
+  @media (max-width:1443px){ 
+    
+    .devinfo{ 
+        font-size: 12px;  
+        margin-left: 1em;
+        
+    } 
+  
+    .buttons{  
+        font-size: 6px;
+        display: flex; 
+
+    }
+
+  }    
+
+  @media (max-width:1446px){ 
+    .image img{  
+        width: 20vw;
+        height: 20vw; 
+        position: absolute  ; 
+        left: 200px; 
+        top: 20px;
+        
+    }  
+  }
+  
+   
+    </style>
+</head>
+<body>      
+    <div class="container">
+    <div class="sidebar sidebargo"  >
+       
+      <nav>
+      <ul >
+          <li> <a href="">Home</a> </li> 
+           <li><a href="intro.html">About</a> </li>
+           <li><a href="">Blog</a></li>
+          <li><a href="">CV</a></li> 
+          <li><a href="">Contact</a></li>
+        </div>           
+      </ul>  
+    </nav>
+      <div class="main"> 
+          <div class="hamburger">
+              <div class="ham"><img src="ham.png" alt="" width="23px"></div>
+              <div class="cross"><img src="cross.png" alt="" width="23px"></div>
+          </div>
+           <div class="infocontainer"> 
+               <div class="devinfo">
+                   <div class="hello">Hi i am  &nbsp;</div>
+                   <div class="name"> Aman &nbsp; </div>
+                   <div class="about">Frontend developer </div> 
+                   <div class="moreabout">I am a developer , and  I love to play games and  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, illum!
+                        
+                   </div>
+                   <div class="buttons">
+                    <a href="cv.txt" class="cv" target="blank"> <button>Download CV</button>  </a> 
+                     <a href="">  <button>Contact Me </button> </a>
+                   </div>
+               </div>
+              <div class="image">
+                  <img src="aman.portfolio3.jpg" alt="">
+              </div>
+           </div>
+      </div>  
+    </div>  
+
+
+    <script>   document.querySelector('.cross').style.display =  'none'; 
+           document.querySelector('.ham').addEventListener('click', showme); 
+           function showme(){ 
+               document.querySelector('.sidebar').classList.toggle('sidebargo')  ;   
+             if( document.querySelector('.sidebar').classList.contains('sidebargo')  ) {
+                 document.querySelector('.ham').style.display = 'inline'
+                 document.querySelector('.cross').style.display = 'none';
+             } 
+             else{  
+                document.querySelector('.ham').style.display = 'none'
+              setTimeout(()  =>{ document.querySelector('.cross').style.display = 'inline';          } , 300);
+             }
+           }          
+           document.querySelector('.cross').addEventListener('click', showme); 
+               </script>
+</body>
+</html>
